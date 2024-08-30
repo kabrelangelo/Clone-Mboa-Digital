@@ -25,11 +25,16 @@ const Navbar = () => {
 
             {/* Menu for Desktop and Mobile */}
             <div className={`lg:flex ${isOpen ? 'block' : 'hidden'} flex-col lg:flex-row lg:space-x-6 lg:items-center`}>
-                <NavLink to="/home" className="block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent">Accueil</NavLink>
-                <NavLink to="/about-us" className="block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent">À propos de</NavLink>
-                <NavLink to="/pricing" className="block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent">Tarification</NavLink>
-                <NavLink to="/case-studies" className="block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent">Cas d'étude</NavLink>
-                <NavLink to="/contact-us" className="block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent">Contact</NavLink>
+                <NavLink to="/home" className={({isActive})=>(isActive? "text-gray-900":
+                "block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent")}>Accueil</NavLink>
+                <NavLink to="/about-us" className={({isActive})=>(isActive? "text-gray-900":
+                "block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent")}>À propos de</NavLink>
+                <NavLink to="/pricing" className={({isActive})=>(isActive? "text-gray-900":
+                "block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent")}>Tarification</NavLink>
+                <NavLink to="/case-studies" className={({isActive})=>(isActive? "text-gray-900":
+              "block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent")}>Cas d'étude</NavLink>
+                <NavLink to="/contact-us" className={({isActive})=>(isActive? "text-gray-900":                 
+                "block py-2 px-4 text-sm text-gray-400 hover:bg-gray-200 lg:hover:bg-transparent")}>Contact</NavLink>
             </div>
         </nav>
     );
