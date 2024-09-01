@@ -13,7 +13,7 @@ const HeroPage = () => {
       </p>
       <Link
   className="group rounded-3xl relative inline-block overflow-hidden border border-black px-8 py-4 focus:outline-none focus:ring"
-  href="#"
+  to="#"
 >
   <span
     className="absolute inset-y-0 left-0 w-[2px] bg-black transition-all group-hover:w-full group-active:bg-black"

@@ -32,12 +32,7 @@ const GridBloc = () => {
           </div>
           <div 
             className={`absolute inset-0 bg-gray-200 transition-transform duration-300 ${
-              index === activeIndex 
-                ? 'translate-x' 
-                : index < activeIndex 
-                  ? 'translate-x-full' 
-                  : 'translate-x-full'
-            }`}
+              index === activeIndex  ? 'translate-x': index < activeIndex? 'translate-x-full' : 'translate-x-full'}`}
           />
         </div>
       ))}
