@@ -21,11 +21,11 @@ const CarouselHome = () => {
           speed={100}
           className="border-t rounded-2xl border-b py-3 overflow-hidden"
         >
-          {elements.map((item, index) => (
-            <Link to="/case-studies">
-            <div key={index} className="flex flex-col justify-center w-[600px] h-[400px] mx-2 cursor-pointer">
+          {elements.map((item) => (
+            <Link key={item.id} to="/case-studies">
+            <div className="flex flex-col justify-center w-[600px] h-[400px] mx-2 cursor-pointer">
               <img src={item.image} className="w-full text-center h-auto object-contain" alt={item.title} />
-              <h2 className="text-3xl font-bold mt-4 text-center">{item.title}</h2>
+              <h2 className="text-2xl font-bold mt-4 text-center">{item.title}</h2>
               <button className='text-lg font-semibold text-left border-solid border-black'>{item.slug}</button>
             </div>
             </Link>
