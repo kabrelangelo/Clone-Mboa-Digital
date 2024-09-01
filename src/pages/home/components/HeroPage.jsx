@@ -3,7 +3,14 @@ import {Link} from 'react-router-dom'
 
 const HeroPage = () => {
     return (
-<div className="container mx-auto pt-20 px-4 sm:px-6 lg:px-8 mt-8 sm:mt-16 md:my-24 lg:my-32">
+<div
+  className="container mx-auto pt-20 px-4 sm:px-6 lg:px-8 mt-8 sm:mt-16 md:my-24 lg:my-32"
+  style={{
+    transform: 'translateX(-100%)',
+    opacity: 0,
+    animation: 'slideInFromLeft 1s ease-out forwards'
+  }}
+>
   <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
     <div className="lg:col-span-3">
       <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4'>Équipes de développeurs d'élite</h2>
