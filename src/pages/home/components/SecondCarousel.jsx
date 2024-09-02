@@ -37,7 +37,7 @@ const SecondCarousel = () => {
         <div className=" h-[200px] shadow-lg bg-gray-300 shadow-slate-400 rounded-2xl w-full">
           <Marquee gradient pauseOnHover="true" className=" border-t rounded-2xl border-b py-3 overflow-hidden grid  ">  
           {images.map((item) => (
-            <div className=" flex pr-10 flex-col justify-center items-center h-[200px] mx-5 ">
+            <div key={item.id} className=" flex pr-10 flex-col justify-center items-center h-[200px] mx-5 ">
               <img src={item.image} className="w-full text-center h-auto object-contain" alt="" />
           </div>
           ))}
