@@ -1,7 +1,10 @@
 import React from 'react'
+import Evaluation from './Evaluation'
 
 export default function Pricing() {
   return (
-    <div>Pricing</div>
+    <div>
+      <Evaluation/>
+    </div>
   )
 }
