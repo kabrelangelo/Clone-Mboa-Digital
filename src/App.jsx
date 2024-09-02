@@ -6,6 +6,7 @@ import Contact from './pages/contact/Contact'
 import CaseStudy from './pages/etude/CaseStudy'
 import Pricing from './pages/tarifs/Pricing'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 export default function App(){
@@ -21,6 +22,7 @@ export default function App(){
       <Route path='/case-studies' element={<CaseStudy />}/>
       <Route path='/contact-us' element={<Contact />}/>
      </Routes>
+     <Footer/>
     </>
   )
 }
