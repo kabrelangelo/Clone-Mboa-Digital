@@ -34,6 +34,7 @@ const HeroPage = () => {
 </Link>
     </div>
   </div>
+  
 </div>
     );
 };
