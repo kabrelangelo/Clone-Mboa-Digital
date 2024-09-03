@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const GridPage = () => {
     const elements = [
@@ -12,10 +13,24 @@ const GridPage = () => {
     return (
         <div className='my-48'>
         {elements.map((element)=>(
-            <div key={element.id} className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 my-20">
+            <div key={element.id} className=" h-auto grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 my-40">
             <div className=" ml-28 rounded-lg ">
-                <h5 className='text-2xl text-black'>{element.slug}</h5>
-                <h2 className='text-4xl w-[80%] font-bold'>{element.title}</h2>
+                <h5 className='text-lg border rounded-3xl py-2 bg-gray-300 px-6  inline-block text-black'>{element.slug}</h5>
+                <h2 className='text-4xl font-bold my-10'>{element.title}</h2>
+                <Link className="group rounded-3xl relative inline-block overflow-hidden border border-black px-8 py-4 focus:outline-none focus:ring"
+  to="#"
+>
+  <span
+    className="absolute inset-y-0 left-0 w-[2px] bg-black transition-all duration-500 group-hover:w-full group-active:bg-black"
+  ></span>
+
+  <span
+    className="relative text-sm font-bold text-black transition-colors duration-500 group-hover:text-white"
+  >
+    Voir Plus  
+  </span>
+  <span className="text-xl font-bold ml-2">→</span>
+</Link>
             </div>
              <div className="mx-5 rounded-lg">
                 <img src={element.image} alt=""  className=''/>
